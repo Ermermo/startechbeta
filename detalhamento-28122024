@@ -1,0 +1,24 @@
+Esse documento detalha tudo feito no dia 28/12/2024 por Emanuel no site da Agência StarTech.
+
+Objetivos do dia:
+- Criação do Navegador e Menu ✅
+- Criação do Container 1 ✅
+- Padronização das cores ✅
+- Responsividade do container 1 e do Menu ✅
+
+Concluido: ✅
+Não Concluido: ❌
+
+OBSERVAÇÃO 1:
+- Deixei tudo organizado em questão de padronização do site, quando você for fazer o container 2,
+se precisar pode criar um padrão classe container2!
+
+OBSERVAÇÃO 2:
+- Não use cores no puro hexadecimal, eu fiz root das cores, é só colocar ->> var(--CorQueEuQueroPredefinida)
+- As cores estão predefinidas, para saber o tom e o nome de cada uma, está na parte de cima no código css
+
+OBSERVAÇÃO 3:
+- HTML tá todo estruturado certinho já, só adicionar itens nele agora, nada de remover
+
+OBSERVAÇÃO 4:
+- Deixarei alguns itens para usar no utilizaveis
