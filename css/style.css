@@ -10,8 +10,10 @@
     --verde2: #107D5D;
     --verde3: #becdbf;
     --verde4: #11DDA1;
+    --verde5: #00AD7A;
     --branco: #fff;
 }
+
 
 /* FORMATAÇÃO PADRÃO */
 
@@ -25,10 +27,12 @@
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
+
+
 /* HEADER */
 
 header{
-    width: 100vw;
+    width: 100%;
     background: linear-gradient(to right, var(--verde2), var(--verde1));
 
     position: fixed;
@@ -38,27 +42,26 @@ header{
 }
 
 nav {
-    width: 70vw;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 nav img{
-    width: 7vh;    
+    width: 4rem;    
 }
 
 nav #links{
     display: flex;
-    gap: 2vh;
+    gap: 1.5rem;
 }
-
 
 header .navbar a{
     color: var(--branco);
     position: relative;
     display: inline-block;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 300;
 }
 
@@ -66,11 +69,11 @@ header .navbar a{
     content: "";
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -0.375rem;
     width: 100%;
-    height: 2px;
+    height: 0.125rem;
     background-color: var(--branco);
-    border-radius: 40px;
+    border-radius: 2.5rem;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform .4s;
@@ -84,10 +87,10 @@ header .navbar a{
     background-color: transparent;
     border: none;
     color: var(--branco);
-    font-size: 40px;
+    font-size: 2.5rem;
     position: absolute;
-    top: 2vh;
-    right: 7vh;
+    top: 1.3rem;
+    right: 3rem;
     display: none;
 
     transition: all 0.5s ease
@@ -103,8 +106,8 @@ header .navbar a{
 /* PADRONIZAÇÃO DE CONTAINERS */
 
 .container{
-    height: 100vh;
     width: auto;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -113,10 +116,10 @@ header .navbar a{
 }
 
 .conteudo{
-    width: 70vw;
+    width: 70%;
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 1rem;
 }
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
@@ -128,7 +131,7 @@ header .navbar a{
 }
 
 #eleve{
-    width: 60vw;
+    width: 90%;
     font-size: 6vh;
     font-weight: 700;
     line-height: 6vh;
@@ -141,17 +144,17 @@ header .navbar a{
 }
 
 #oferecemos{
-    width: 50vw;
-    font-size: 2.5vh;
+    width: 70%;
+    font-size: 3vh;
     line-height: 3vh;
 
     color: var(--verde1);
 }
 
 #botao1{
-    width: 20vw;
-    height: 2.5vw;
-    border-radius: 10vw;
+    width: 20rem;
+    height: 3rem;
+    border-radius: 2rem;
 
     display: flex;
     align-items: center;
@@ -165,12 +168,10 @@ header .navbar a{
 #botao1:hover{
     transform: scale(1.20);
     cursor: pointer;
-    background: var(--verde4);
-    color: var(--verde1);
 }
 
 #botao11{
-    font-size: 1vw;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -191,21 +192,162 @@ header .navbar a{
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
+/* CONTAINER 3 */
+
+#conteudo3{
+    width: 90%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin: 2rem 0;
+
+    height: 80%;
+}
+
+#container3{
+    height: 100%;
+}
+
+.titulo{
+    font-size: 4vh;
+    font-weight: 700;
+    margin-top: 1rem;
+
+    background-image: linear-gradient(to right, var(--verde2), var(--verde1));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.card{
+    width: 400px;
+    height: 550px;
+    border-radius: 2rem;
+
+    background-color: var(--verde5);
+}
+
+/* #cards{
+    display: flex;
+    gap: 6vw;
+    flex-direction: unset;
+} */
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens "quebrem" para a próxima linha */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 60px; /* Espaçamento entre os cards */
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%; /* Faz com que os cards ocupem 100% da largura em telas menores */
+  }
+}
+
+/* CONTEÚDO DOS CARDS */
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-card{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card-titulo, .card-topico{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-titulo > img {
+    height: 3rem;
+}
+
+.card-titulo .card-titulo1{
+    font-size: 3vh;
+    font-weight: 500;
+    color: var(--branco);
+}
+
+.card-topicos{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-topico .card-topico1{
+    font-size: 2.5vh;
+    font-weight: 500;
+    color: var(--verde1);
+}
+
+.card-topico > img{
+    height: 2.5rem;
+}
+
+.botao2{
+    width: 20rem;
+    height: 3rem;
+    border-radius: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.5s ease;
+    background: linear-gradient(to right, var(--verde2), var(--verde1));
+    color: var(--branco);
+}
+
+.botao2:hover{
+    transform: scale(1.10);
+    cursor: pointer;
+}
+
+.botao21{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+/* CONTAINER 4 */
+
+#container4{
+    background: linear-gradient(to right, var(--verde2), var(--verde1));
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
 /* SCROLL BAR (BARRA DE SCROLL LATERAL) */
 
 ::-webkit-scrollbar {
-    width: 10px; 
+    width: 0.625rem; 
 }
 
 
 ::-webkit-scrollbar-track {
-    background: var(--verde1); 
+    background: linear-gradient(to bottom, var(--verde1), var(--verde2)); 
 }
 
 
 ::-webkit-scrollbar-thumb {
     background: var(--verde4); 
-    border-radius: 10px; 
+    border-radius: 0.625rem; 
 }
 
 
@@ -214,40 +356,43 @@ header .navbar a{
 /* MEDIA QUERRY DE CADA ESPAÇAMENTO, TÁ TUDO MUITO AJUSTADO JÁ, SÓ COLOCAR O CONTEÚDO EM CADA CONTAINER */
 
 @media(max-width: 1440px){
-    
-    #botao1{
-        width: 25vw;
-        height: 3.5vw;
-    }
-    #botao11{
-        font-size: 1.5vw;
-    }
+
 
 }
 
 @media(max-width: 1024px){
     #container1 .conteudo{
-        width: 90vw;
+        width: 90%;
     }
 
     #eleve{
-        width: 70vw;
+        width: 80%;
     }
-
+    
     #oferecemos{
         width: 60vw;
-    }
-
-    #botao1{
-        width: 30vw;
-        height: 4vw;
-    }
-    #botao11{
-        font-size: 2vw;
+        font-size: 2.5vh;
+        line-height: 3vh;
+    
     }
 
     #victorfoto{
-        width: 50vw;
+        width: 50vh
+    }
+
+}
+
+@media(max-width: 880px){
+    #eleve{
+        font-size: 5.5vh;
+        line-height: 5.5vh;
+    }
+}
+
+@media(max-width: 830px){
+    #eleve{
+        font-size: 4.5vh;
+        line-height: 4.5vh;
     }
 }
 
@@ -259,7 +404,7 @@ header .navbar a{
         width: 90vw;
         margin-top: 2vh;
     }
-
+    
     #links{
         flex-direction: column;
         align-items: unset;
@@ -276,75 +421,86 @@ header .navbar a{
         display: flex;
     }
 
-    #textologo{
-        display: flex;
-    }
-
     #menu:focus ~ #links{
         opacity: 100%;
         height: 100%;
     }
 
-    #botao1{
-        width: 40vw;
-        height: 6vw;
-    }
-    #botao11{
-        font-size: 2.5vw;
+    #victorfoto{
+        width: 40vh
     }
 }
 
 @media(max-width: 680px){
+
     #eleve{
         font-size: 4.5vh;
         line-height: 4.5vh;
     }
 
-    #victorfoto{
-        width: 60vw;
+    #botao1{
+        width: 15rem;
+        height: 2rem;
+        border-radius: 2rem;
+    }
+    
+    #botao11{
+        font-size: 1rem;
     }
 }
 
-@media(max-width: 580px){
-    #container1 .conteudo{
-        gap: 4vw;
-    }
+@media(max-width: 520px){
 
-    #eleve{
-        width: 70vw;
-        font-size: 4.5vh;
-        line-height: 4vh;
-    }
-
-    #oferecemos{
-        font-size: 2vh;
-        line-height: 2vh;
-    }
-
-    #botao11{
-        font-size: 1.5vh;
-    }
-
-    #victorfoto{
-        width: 70vw;
-    }
 }
 
 @media(max-width: 440px){
+
     #eleve{
-        width: 80vw;
+        font-size: 3.5vh;
+        line-height: 3.5vh;
     }
+
+    #oferecemos{
+        width: 60vw;
+        font-size: 2vh;
+        line-height: 2vh;
+    
+    }
+
+    
+}
+
+@media(max-width: 439px){
+    .card{
+        max-width: 350px;
+        max-height: 450px;
+        border-radius: 2rem;
+    
+        background-color: var(--verde5);
+    }
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+/* MEDIAS EXTRAS */
+
+@media(max-width: 500px) and (max-height: 1040px){
 
     #victorfoto{
-        width: 70vw;
+        width: 35vh
     }
 
-    #botao1{
+    #eleve{
+        width: 80vw;
+        font-size: 3.5vh;
+        line-height: 3.5vh;
+    }
+
+    #oferecemos{
         width: 60vw;
-        height: 7vw;
+        font-size: 2vh;
+        line-height: 2vh;
+    
     }
-    #botao11{
-        font-size: 3.5vw;
-    }
-
 }
+
