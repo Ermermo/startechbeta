@@ -194,27 +194,11 @@ header .navbar a{
 
 /* CONTAINER 3 */
 
-#conteudo3{
+#servicos{
     width: 90%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-    margin: 2rem 0;
-
-    height: 80%;
-}
-
-#container3{
-    height: 100%;
-}
-
-.titulo{
-    font-size: 4vh;
+    font-size: 3.5rem;
     font-weight: 700;
-    margin-top: 1rem;
+    line-height: 3.5rem;
 
     background-image: linear-gradient(to right, var(--verde2), var(--verde1));
     -webkit-background-clip: text;
@@ -223,105 +207,32 @@ header .navbar a{
     color: transparent;
 }
 
-.card{
-    width: 400px;
-    height: 550px;
-    border-radius: 2rem;
-
-    background-color: var(--verde5);
-}
-
-/* #cards{
-    display: flex;
-    gap: 6vw;
-    flex-direction: unset;
-} */
-
-.grid-container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os itens "quebrem" para a próxima linha */
-    justify-content: center; /* Centraliza os cards horizontalmente */
-    gap: 60px; /* Espaçamento entre os cards */
-}
-
-@media (max-width: 768px) {
-  .card {
-    max-width: 100%; /* Faz com que os cards ocupem 100% da largura em telas menores */
-  }
-}
-
-/* CONTEÚDO DOS CARDS */
-
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.conteudo-card{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-.card-titulo, .card-topico{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.card-titulo > img {
-    height: 3rem;
-}
-
-.card-titulo .card-titulo1{
-    font-size: 3vh;
-    font-weight: 500;
-    color: var(--branco);
-}
-
-.card-topicos{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.card-topico .card-topico1{
-    font-size: 2.5vh;
-    font-weight: 500;
-    color: var(--verde1);
-}
-
-.card-topico > img{
-    height: 2.5rem;
-}
-
-.botao2{
-    width: 20rem;
-    height: 3rem;
-    border-radius: 2rem;
-
-    display: flex;
+#caixa{
+    background-color: var(--verde2);
+    width: 20rem; 
+    height: 25rem;
+    border-radius: 0.625rem;
+    display: flex; 
     align-items: center;
     justify-content: center;
-
-    transition: all 0.5s ease;
-    background: linear-gradient(to right, var(--verde2), var(--verde1));
-    color: var(--branco);
 }
 
-.botao2:hover{
-    transform: scale(1.10);
-    cursor: pointer;
+#cartao1{
+    width: 90%;
+    display: flex; 
+    flex-direction: column;
 }
 
-.botao21{
-    font-size: 1.3rem;
-    font-weight: 600;
+.cartao-linha{
+    display: flex;
+
 }
+
+#caixa img{
+    width: 2rem;
+    height: 2rem;
+}
+
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
