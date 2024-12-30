@@ -128,7 +128,7 @@ header .navbar a{
 /* CONTAINER 1 */
 
 #container1{
-    background-color: var(--branco);
+    background-color: var(--verde1);
 }
 
 #eleve{
@@ -461,7 +461,7 @@ header .navbar a{
     
     #conteudo2 {
         width: 90%;
-        margin: 10vh 0;
+        margin: 15vh 0;
     }
 
 }
@@ -496,14 +496,17 @@ header .navbar a{
     
     #links{
         flex-direction: column;
-        align-items: unset;
+        align-items: center;
         margin: 1.5vh 0;
         height: 0;
         opacity: 0;
+        width: 100%;
     }
     
     .links{
-        margin: 0.5vh;
+        margin: 0.5vh 0;
+        width: 100%;
+        text-align: center;
     }
 
     #menu{
@@ -513,6 +516,7 @@ header .navbar a{
     #menu:focus ~ #links{
         opacity: 100%;
         height: 100%;
+        overflow-y: 100%;
     }
 
     .titulo{
