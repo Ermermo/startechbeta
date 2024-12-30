@@ -26,10 +26,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    padding-bottom: env(safe-area-inset-bottom);
-}
-
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 
