@@ -132,6 +132,7 @@ header .navbar a{
 
 #container1{
     background-color: var(--branco);
+    overflow: hidden;
 }
 
 #eleve{
