@@ -139,6 +139,8 @@ header .navbar a{
 
 #container1{
     background-color: var(--branco);
+    position: relative;
+    height: -webkit-fill-available; 
 }
 
 #eleve{
