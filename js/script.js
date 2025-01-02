@@ -43,3 +43,26 @@ function abrirLink() {
   // Redirecionar para a URL em uma nova aba
   window.open(url, '_blank');
 }
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// SCROLL TO REVEAL
+
+const cards = document.querySelectorAll('.sr1, .sr2, .sr3, .sr4');
+
+function reveal() {
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const cardTop = card.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (cardTop < windowHeight) {
+      card.classList.add('show');
+    } else {
+      card.classList.remove('show');
+    }
+  }
+}
+
+window.addEventListener('scroll', reveal);
+reveal(); // Chama a função inicialmente para garantir que os elementos já na viewport sejam animados
