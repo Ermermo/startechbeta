@@ -46,6 +46,21 @@ function abrirLink() {
 
 // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+// ONCLICK 2
+
+function abrirLink2() {
+  // Pegar o elemento 'a' dentro do botão
+  const link = document.getElementsByClassName('botao');
+
+  // Obter o href do link
+  const url = "https://www.instagram.com/startechofc/";
+
+  // Redirecionar para a URL em uma nova aba
+  window.open(url, '_blank');
+}
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 // SCROLL TO REVEAL
 
 const cards = document.querySelectorAll('.sr1, .sr2, .sr3, .sr4');
