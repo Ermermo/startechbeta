@@ -133,6 +133,12 @@ header .navbar a{
     gap: 1rem;
 }
 
+.container-background{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+}
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 /* CONTAINER 1 */
@@ -207,14 +213,14 @@ header .navbar a{
 /* CONTAINER 2 */
 
 #container2 {
-    background: linear-gradient(to right, var(--verde2), var(--verde1));
     z-index: 1;
+    background: linear-gradient(to right, var(--verde2), var(--verde1));
 }
-
 #conteudo2 {
     gap: 2vh;
     justify-content: center;
     width: 70%;
+    z-index: 1;
 }
 
 #emanuelfoto{
@@ -519,6 +525,10 @@ header .navbar a{
     #conteudo2 {
         width: 90%;
         margin: 10vh 0;
+    }
+
+    .container-background{
+        visibility: hidden;
     }
 
 }
