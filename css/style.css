@@ -24,6 +24,7 @@
     --branco: #fff;
     --brunofont: 'Bruno Ace', sans serif;
     --pcardbackground: rgba(0, 56, 59, 0);
+    --accordionshadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 html{
@@ -37,11 +38,6 @@ html{
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-}
-
-*:focus{
-    outline: none;
-    box-shadow: none;
 }
 
 body{
@@ -101,15 +97,12 @@ header .navbar a{
     transform-origin: right;
     transition: transform .4s;
 }
+
 .navbar a:hover::after{
     transform-origin: left;
     transform: scaleX(1);
 }
 
-.navbar a:focus::after{
-    transform-origin: left;
-    transform: scaleX(1);
-}
 
 #menu{
     background-color: transparent;
@@ -312,10 +305,6 @@ header .navbar a{
     background-clip: text;
     color: transparent;
 }
-
-
-
-
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
@@ -562,6 +551,112 @@ header .navbar a{
     background-clip: text;
     color: transparent;
 }
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+/* CONTAINER 5 */
+
+#conteudo5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtitulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 0 5rem 0;
+}
+
+.subtitulo > .fa-star{
+    color: var(--verde1);
+    font-size: 2rem;
+}
+
+.subtitulo > span{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#accordions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.accordion{
+    background-color: transparent;
+    border-radius: 1rem;
+    border: solid 3px var(--verde2);
+    cursor: pointer;
+    padding: 1rem;
+    box-shadow: var(--accordionshadow);
+}
+
+.accordion-header, .accordion-header2{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.accordion-header{
+    flex-direction: row;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: var(--verde2);
+    font-weight: 600;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+
+.accordion-header span{
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.accordion-header .fa-globe{
+    font-size: 2rem;
+    color: var(--verde2);
+}
+
+.accordion-body{
+    font-size: 1.1rem;
+    opacity: 0;
+    height: 0;
+    cursor: pointer;
+    overflow: hidden;
+    transition: opacity .3s;
+}
+
+.accordion-body.active{
+    height: 100%;
+    opacity: 1;
+    padding: 1rem 0 0 0;
+    transition: all 0.5s ease;
+}
+
+.arrow{
+    transition: all 0.5s ease;
+}
+
+.accordion:has(.active) .arrow {
+    transform: rotate(180deg);
+
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 /* ======== FOOTER ======== */
 
@@ -841,6 +936,22 @@ header .navbar a{
         font-size: 4.5vh;
         line-height: 4.5vh;
     }
+
+    .accordion-header{
+        font-size: 1rem;
+    }
+
+    .accordion-header .fa-globe, .subtitulo > .fa-star{
+        font-size: 1.5rem;
+    }
+    
+    .subtitulo{
+        width: 90vw;
+    }
+
+    .subtitulo > span{
+        font-size: 1.2rem;;
+    }
 }
 
 @media(max-width: 768px){
@@ -957,6 +1068,18 @@ header .navbar a{
     #container2-textos > p {
         font-size: 2.2vh;
         line-height: 2.5vh;
+    }
+
+    .accordion-header{
+        display: block;
+    }
+
+    .accordion-header span{
+        height: auto;
+    }
+
+    .accordion{
+        width: 90vw;
     }
 }
 

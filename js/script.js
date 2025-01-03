@@ -81,3 +81,16 @@ function reveal() {
 
 window.addEventListener('scroll', reveal);
 reveal(); // Chama a função inicialmente para garantir que os elementos já na viewport sejam animados
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+// ACCORDION
+
+const accordions = document.querySelectorAll('.accordion')
+
+accordions.forEach(accordion => {
+  accordion.addEventListener('click', () =>{
+    const body = accordion.querySelector('.accordion-body');
+    body.classList.toggle('active');
+  })
+})
