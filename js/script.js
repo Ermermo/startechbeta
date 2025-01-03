@@ -33,16 +33,16 @@ function scrollToSection(elementId, duration = 1500) {
 
 // ONCLICK
 
-function abrirLink() {
-  // Pegar o elemento 'a' dentro do botão
-  const link = document.getElementsByClassName('botao');
+// function abrirLink() {
+//   // Pegar o elemento 'a' dentro do botão
+//   const link = document.getElementsByClassName('botao');
 
-  // Obter o href do link
-  const url = "https://wa.me/5581988341121";
+//   // Obter o href do link
+//   const url = "https://wa.me/5581988341121";
 
-  // Redirecionar para a URL em uma nova aba
-  window.open(url, '_blank');
-}
+//   // Redirecionar para a URL em uma nova aba
+//   window.open(url, '_blank');
+// }
 
 // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
