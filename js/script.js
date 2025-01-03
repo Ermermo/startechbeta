@@ -29,6 +29,8 @@ function scrollToSection(elementId, duration = 1500) {
     }
   }
 
+// xxxxxxxxxxxxxxxxxxxxxxx
+
 // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 // ONCLICK
@@ -94,3 +96,6 @@ accordions.forEach(accordion => {
     body.classList.toggle('active');
   })
 })
+
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

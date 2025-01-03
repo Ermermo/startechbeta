@@ -1,13 +1,13 @@
-/* FONTES IMPORTADAS */
+/* ======== FONTES IMPORTADAS ======== */
 
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Bruno+Ace+SC&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* bootstrap icons */
+/* ======== BOOTSTRAP ICONS ======== */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 
-/* ROOT DE CORES */
+/* ======== ROOT ======== */
 
 :root {
     --verde1: #00383B;
@@ -27,10 +27,11 @@
     --accordionshadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-html{
+/* ======== FORMATAÇÃO PADRÃO ======== */
+
+html {
     height: -webkit-fill-avaliable;
 }
-/* FORMATAÇÃO PADRÃO */
 
 * {
     padding: 0;
@@ -40,17 +41,13 @@ html{
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     height: -webkit-fill-avaliable;
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* ======== HEADER ======== */
 
-
-
-/* HEADER */
-
-header{
+header {
     width: 100%;
     background: linear-gradient(to right, var(--verde2), var(--verde1));
 
@@ -67,16 +64,46 @@ nav {
     justify-content: space-between;
 }
 
-nav img{
+nav img {
     width: 4rem;    
 }
 
-nav #links{
-    display: flex;
-    gap: 1.5rem;
+nav button{
+    background-color: transparent;
+    border: none;
+    color: var(--branco);
+    position: absolute;
+    right: 2.5rem;
+    top: 2rem;
+    display: none;
 }
 
-header .navbar a{
+nav button i{
+    font-size: 2.5rem;
+}
+
+nav button:hover{
+    cursor: pointer;
+}
+
+nav button:focus ~ ul {
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 1.5rem;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+nav li:hover{
+    cursor: pointer;
+}
+
+nav ul li a{
     color: var(--branco);
     position: relative;
     display: inline-block;
@@ -84,7 +111,15 @@ header .navbar a{
     font-weight: 300;
 }
 
-.navbar a::after{
+/* header .navbar a {
+    color: var(--branco);
+    position: relative;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 300;
+} */
+
+.navbar a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -98,35 +133,14 @@ header .navbar a{
     transition: transform .4s;
 }
 
-.navbar a:hover::after{
+.navbar a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
 }
 
+/* ======== PADRONIZAÇÃO DE CONTAINERS ======== */
 
-#menu{
-    background-color: transparent;
-    border: none;
-    color: var(--branco);
-    font-size: 2.5rem;
-    position: absolute;
-    top: 1.3rem;
-    right: 3rem;
-    display: none;
-
-    transition: all 0.5s ease
-}
-
-#menu:hover{
-    cursor: pointer;
-    transform: scale(1.20);
-}
-
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
-
-/* PADRONIZAÇÃO DE CONTAINERS */
-
-.container{
+.container {
     width: auto;
     height: 100%;
 
@@ -137,7 +151,7 @@ header .navbar a{
     height: -webkit-fill-avaliable;
 }
 
-.conteudo{
+.conteudo {
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -147,24 +161,23 @@ header .navbar a{
     gap: 1rem;
 }
 
-.container-background{
+.container-background {
     position: absolute;
     height: 100vh;
     width: 100%;
     z-index: 0;
     pointer-events: none;
 }
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
-/* CONTAINER 1 */
+/* ======== CONTAINER 1 ======== */
 
-#container1{
+#container1 {
     background-color: var(--branco);
     position: relative;
     height: -webkit-fill-available; 
 }
 
-#eleve{
+#eleve {
     width: 90%;
     font-size: 6vh;
     font-weight: 700;
@@ -177,7 +190,7 @@ header .navbar a{
     color: transparent;
 }
 
-#oferecemos{
+#oferecemos {
     width: 70%;
     font-size: 3vh;
     line-height: 3vh;
@@ -185,7 +198,7 @@ header .navbar a{
     color: var(--verde1);
 }
 
-#botao1{
+#botao1 {
     width: 20rem;
     height: 3rem;
     border-radius: 2rem;
@@ -199,18 +212,18 @@ header .navbar a{
     color: var(--branco);
 }
 
-#botao1:hover{
+#botao1:hover {
     transform: scale(1.20);
     cursor: pointer;
 }
 
-#botao11{
+#botao11 {
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--branco);
 }
 
-#astronauta{
+#astronauta {
     position: absolute;
     right: 0;
     bottom: 0vh;
@@ -218,14 +231,11 @@ header .navbar a{
     transform: scaleX(-1);  
 }
 
-
-.foto{
+.foto {
     transition: all .5s ease;
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
-
-/* CONTAINER 2 */
+/* ======== CONTAINER 2 ======== */
 
 #container2 {
     z-index: 1;
@@ -238,21 +248,12 @@ header .navbar a{
     z-index: 1;
 }
 
-#emanuelfoto{
+#emanuelfoto {
     position: relative;
     left: 0;
     bottom: 0vh;
     width: 65vh;
 }
-
-/* #container2 > img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 10%;
-    z-index: 0;
-} */
-
 
 #container2-textos {
     display: flex;
@@ -278,7 +279,7 @@ header .navbar a{
     color: var(--branco);
 }
 
-#botao2{
+#botao2 {
     width: 20rem;
     height: 3rem;
     border-radius: 2rem;
@@ -291,12 +292,12 @@ header .navbar a{
     background: var(--branco);
 }
 
-#botao2:hover{
+#botao2:hover {
     transform: scale(1.20);
     cursor: pointer;
 }
 
-#botao21{
+#botao21 {
     font-size: 1.2rem;
     font-weight: 600;
     background-image: linear-gradient(to right, var(--verde2), var(--verde1));
@@ -306,11 +307,9 @@ header .navbar a{
     color: transparent;
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* ======== CONTAINER 3 ======== */
 
-/* CONTAINER 3 */
-
-#conteudo3{
+#conteudo3 {
     width: 90%;
     min-height: 100vh;
     display: flex;
@@ -323,16 +322,16 @@ header .navbar a{
     height: 80%;
 }
 
-#container3{
+#container3 {
     height: 100%;
 }
 
-.titulo{
+.titulo {
     font-size: 6vh;
     font-weight: 700;
 }
 
-#titulo-container3{
+#titulo-container3 {
     margin-top: 1rem;
     
     background-image: linear-gradient(to right, var(--verde2), var(--verde1));
@@ -342,19 +341,13 @@ header .navbar a{
     color: transparent;
 }
 
-.card{
+.card {
     width: 400px;
     height: 550px;
     border-radius: 2rem;
 
     background-color: var(--verde5);
 }
-
-/* #cards{
-    display: flex;
-    gap: 6vw;
-    flex-direction: unset;
-} */
 
 .grid-container {
     display: flex;
@@ -370,14 +363,15 @@ header .navbar a{
 }
 
 /* ======== CONTEÚDO DOS CARDS ========*/
-.card{
+
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.conteudo-card{
+.conteudo-card {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -385,7 +379,7 @@ header .navbar a{
     gap: 2rem;
 }
 
-.card-titulo, .card-topico{
+.card-titulo, .card-topico {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -395,19 +389,19 @@ header .navbar a{
     height: 3rem;
 }
 
-.card-titulo .card-titulo1{
+.card-titulo .card-titulo1 {
     font-size: 3vh;
     font-weight: 500;
     color: var(--branco);
 }
 
-.card-topicos{
+.card-topicos {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.card-topico .card-topico1{
+.card-topico .card-topico1 {
     font-size: 2.5vh;
     font-weight: 500;
     color: var(--verde1);
@@ -417,7 +411,7 @@ header .navbar a{
     height: 2.5rem;
 }
 
-.botao3{
+.botao3 {
     width: 20rem;
     height: 3rem;
     border-radius: 2rem;
@@ -431,25 +425,23 @@ header .navbar a{
     color: var(--branco);
 }
 
-.botao3:hover{
+.botao3:hover {
     transform: scale(1.10);
     cursor: pointer;
 }
 
-.botao31{
+.botao31 {
     font-size: 1.3rem;
     font-weight: 600;
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* ======== CONTAINER 4 ======== */
 
-/* CONTAINER 4 */
-
-#container4{
+#container4 {
     background: linear-gradient(to right, var(--verde2), var(--verde1));
 }
 
-#conteudo4{
+#conteudo4 {
     width: 90%;
     min-height: 100vh;
     display: flex;
@@ -462,11 +454,11 @@ header .navbar a{
     height: 80%;
 }
 
-#titulo-container4{
+#titulo-container4 {
     text-align: center;
 }
 
-#pcards{
+#pcards {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -475,7 +467,7 @@ header .navbar a{
     gap: 5rem;
 }
 
-.pcard{
+.pcard {
     width: 400px;
     height: 500px;
     border: solid 1px var(--verde5);
@@ -489,14 +481,14 @@ header .navbar a{
     gap: 1rem;
 }
 
-.pcard > p{
+.pcard > p {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--branco);
     top: -2.7rem;
 }
 
-.pcard-imagem{
+.pcard-imagem {
     height: 150px;
     width: 350px;
     border-radius: 1rem;
@@ -505,13 +497,13 @@ header .navbar a{
     background-color: var(--branco);
 }
 
-.pcard-imagem > img{
+.pcard-imagem > img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.pcard-texto{
+.pcard-texto {
     height: 170px;
     width: 350px;
     font-size: 0.9rem;
@@ -520,11 +512,11 @@ header .navbar a{
     text-align: justify;
 }
 
-.pcard-texto > span{
+.pcard-texto > span {
     font-family: var(--brunofont);
 }
 
-.botao4{
+.botao4 {
     width: 20rem;
     height: 3rem;
     border-radius: 2rem;
@@ -537,12 +529,12 @@ header .navbar a{
     background: var(--branco);
 }
 
-.botao4:hover{
+.botao4:hover {
     transform: scale(1.10);
     cursor: pointer;
 }
 
-.botao41{
+.botao41 {
     font-size: 1.2rem;
     font-weight: 600;
     background-image: linear-gradient(to right, var(--verde2), var(--verde1));
@@ -552,18 +544,16 @@ header .navbar a{
     color: transparent;
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* ======== CONTAINER 5 ======== */
 
-/* CONTAINER 5 */
-
-#conteudo5{
+#conteudo5 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.subtitulo{
+.subtitulo {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -572,17 +562,17 @@ header .navbar a{
     margin: 0 0 5rem 0;
 }
 
-.subtitulo > .fa-star{
+.subtitulo > .fa-star {
     color: var(--verde1);
     font-size: 2rem;
 }
 
-.subtitulo > span{
+.subtitulo > span {
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-#accordions{
+#accordions {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -590,7 +580,7 @@ header .navbar a{
     gap: 1rem;
 }
 
-.accordion{
+.accordion {
     background-color: transparent;
     border-radius: 1rem;
     border: solid 3px var(--verde2);
@@ -599,7 +589,7 @@ header .navbar a{
     box-shadow: var(--accordionshadow);
 }
 
-.accordion-header, .accordion-header2{
+.accordion-header, .accordion-header2 {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -607,7 +597,7 @@ header .navbar a{
     gap: 1rem;
 }
 
-.accordion-header{
+.accordion-header {
     flex-direction: row;
     width: 100%;
     border: none;
@@ -619,19 +609,19 @@ header .navbar a{
     transition: all 0.5s ease;
 }
 
-.accordion-header span{
+.accordion-header span {
     max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.accordion-header .fa-globe{
+.accordion-header .fa-globe {
     font-size: 2rem;
     color: var(--verde2);
 }
 
-.accordion-body{
+.accordion-body {
     font-size: 1.1rem;
     opacity: 0;
     height: 0;
@@ -640,14 +630,14 @@ header .navbar a{
     transition: opacity .3s;
 }
 
-.accordion-body.active{
+.accordion-body.active {
     height: 100%;
     opacity: 1;
     padding: 1rem 0 0 0;
     transition: all 0.5s ease;
 }
 
-.arrow{
+.arrow {
     transition: all 0.5s ease;
 }
 
@@ -655,8 +645,6 @@ header .navbar a{
     transform: rotate(180deg);
 
 }
-
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 /* ======== FOOTER ======== */
 
@@ -668,12 +656,12 @@ header .navbar a{
 
 }
 
-#conteudo-footer{
+#conteudo-footer {
     height: 100%;
     margin: 4rem 0;
 }
 
-#logo-contatos{
+#logo-contatos {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -681,41 +669,41 @@ header .navbar a{
     justify-content: center;
 }
 
-#logo-footer{
+#logo-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#logo-footer > p{
+#logo-footer > p {
     font-family: var(--brunofont);
     font-size: 1.5rem;
     color: var(--branco);
 }
 
-#logo-footer > img{
+#logo-footer > img {
     width: 10rem;
 }
 
-#footer-divisoria{
+#footer-divisoria {
     height: 15rem;
     width: 0.3rem;
     background-color: var(--branco);
 }
 
-#contatos-footer{
+#contatos-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.3rem;
 }
 
-#contatos-titulo{
+#contatos-titulo {
     color: var(--branco);
     font-size: 1.5rem;
 }
 
-#botao51{
+#botao51 {
     width: 20rem;
     height: 3rem;
     border-radius: 2rem;
@@ -732,28 +720,28 @@ header .navbar a{
     transition: all 0.5s ease;
 }
 
-#botao5:hover{
+#botao5:hover {
     transform: scale(1.10);
     cursor: pointer;
 }
 
-#botao51:hover{
+#botao51:hover {
     background-color: var(--branco);
     color: var(--verde1);
 }
 
-#botao51 > i{
+#botao51 > i {
     color: var(--verde1);
     font-size: 30px;
 }
 
-#botao51 > p{
+#botao51 > p {
     color: var(--verde1);
     font-weight: 500;
     font-size: 1.4rem;
 }
 
-#botao61{
+#botao61 {
     width: 20rem;
     height: 3rem;
     border-radius: 2rem;
@@ -770,32 +758,32 @@ header .navbar a{
     transition: all 0.5s ease;
 }
 
-#botao6:hover{
+#botao6:hover {
     transform: scale(1.10);
     cursor: pointer;
 }
 
-#botao61:hover{
+#botao61:hover {
     background: var(--branco);
     --insta4: var(--insta1);
 }
 
-#botao61 > i{
+#botao61 > i {
     color: var(--insta4);
     font-size: 30px;
 }
 
-#botao6 > i:hover{
+#botao6 > i:hover {
     color: var(--insta3);
 }
 
-#botao61 > p{
+#botao61 > p {
     color: var(--branco);
     font-weight: 500;
     font-size: 1.4rem;
 }
 
-#botao61 > p:hover{
+#botao61 > p:hover {
     background-image: linear-gradient(to right, var(--insta4), var(--insta2), var(--insta3));
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -803,22 +791,19 @@ header .navbar a{
     color: transparent;
 }
 
-#direitos{
+#direitos {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#direitos > p{
+#direitos > p {
     color: var(--branco);
     font-size: 1rem;
     font-weight: 300;
 }
 
-
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
-
-/* SCROLL BAR (BARRA DE SCROLL LATERAL) */
+/* ======== SCROLL BAR (BARRA DE SCROLL LATERAL) ======== */
 
 ::-webkit-scrollbar {
     width: 0.625rem; 
@@ -835,9 +820,8 @@ header .navbar a{
     border-radius: 0.625rem; 
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* ======== SCROLL REVEAL ======== */
 
-/* Scroll reveal */
 .sr1 {
     opacity: 0;
     transform: translateY(50px);
@@ -867,40 +851,30 @@ header .navbar a{
     transform: translateY(0);
 }
 
-
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
-
-/* SELEÇÃO DE ITENS E TEXTO */
+/* ======== SELEÇÃO DE ITENS E TEXTO ======== */
 ::selection {
     background-color: var(--verde3); 
     color: var(--verde1); 
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* ======== MEDIA QUERRY ======== */
 
-/* MEDIA QUERRY DE CADA ESPAÇAMENTO, TÁ TUDO MUITO AJUSTADO JÁ, SÓ COLOCAR O CONTEÚDO EM CADA CONTAINER */
-
-@media(max-width: 1440px){
-
-
-}
-
-@media(max-width: 1024px){
-    #container1 .conteudo{
+@media(max-width: 1024px) {
+    #container1 .conteudo {
         width: 90%;
     }
     
-    #eleve{
+    #eleve {
         width: 80%;
     }
     
-    #oferecemos{
+    #oferecemos {
         width: 60vw;
         font-size: 2.5vh;
         line-height: 3vh;
     }
 
-    #astronauta{
+    #astronauta {
         width: 50vh;
     }
 
@@ -913,14 +887,14 @@ header .navbar a{
         margin: 10vh 0;
     }
 
-    .container-background{
+    .container-background {
         visibility: hidden;
     }
 
 }
 
-@media(max-width: 880px){
-    #eleve{
+@media(max-width: 880px) {
+    #eleve {
         font-size: 5.5vh;
         line-height: 5.5vh;
     }
@@ -931,132 +905,124 @@ header .navbar a{
     }
 }
 
-@media(max-width: 830px){
-    #eleve{
+@media(max-width: 830px) {
+    #eleve {
         font-size: 4.5vh;
         line-height: 4.5vh;
     }
 
-    .accordion-header{
+    .accordion-header {
         font-size: 1rem;
     }
 
-    .accordion-header .fa-globe, .subtitulo > .fa-star{
+    .accordion-header .fa-globe, .subtitulo > .fa-star {
         font-size: 1.5rem;
     }
     
-    .subtitulo{
+    .subtitulo {
         width: 90vw;
     }
 
-    .subtitulo > span{
+    .subtitulo > span {
         font-size: 1.2rem;;
     }
 }
 
-@media(max-width: 768px){
-
+@media(max-width: 768px) {
+    
     nav {
         flex-direction: column;
         align-items: flex-start;
         width: 90vw;
         margin-top: 2vh;
-    }
-    
-    #links{
-        flex-direction: column;
-        align-items: center;
-        margin: 1.5vh 0;
-        height: 0;
-        opacity: 0;
-        width: 100%;
-    }
-    
-    .links{
-        margin: 0.5vh 0;
-        width: 100%;
-        text-align: center;
+        margin-bottom: 3vh;
     }
 
-    #menu{
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        height: 0;
+    }
+
+    nav li{
+        width: 100%;
+    }
+
+    nav button{
         display: flex;
     }
 
-    #menu:focus ~ #links{
-        opacity: 100%;
-        height: 100%;
-        overflow-y: 100%;
-    }
-
-    .titulo{
+    .titulo {
         font-size: 4vh;
         font-weight: 700;
     }
 
-    #astronauta{
+    #astronauta {
         width: 40vh;
     }
 }
 
-@media(max-width: 680px){
+@media(max-width: 680px) {
 
-    #eleve{
+    #eleve {
         font-size: 4.5vh;
         line-height: 4.5vh;
         width: 90%;
     }
 
-    #botao1{
+    #botao1 {
         width: 15rem;
         height: 2rem;
         border-radius: 2rem;
     }
     
-    #botao11{
+    #botao11 {
         font-size: 1rem;
     }
 
-    #contatos-footer{
+    #contatos-footer {
         gap: 1rem;
     }
 
-    #logo-footer > p{
+    #logo-footer > p {
         font-size: 1rem;
     }
 
-    #logo-footer > img{
+    #logo-footer > img {
         width: 7rem;
     }
 
-    #footer-divisoria{
+    #footer-divisoria {
         height: 12rem;
     }
 
-    #botao51, #botao61{
+    #botao51, #botao61 {
         width: 15rem;
         height: 2.5rem;
     
         gap: 0.5rem;
     }
 
-    #botao51 > i, #botao61 > i{
+    #botao51 > i, #botao61 > i {
         font-size: 20px;
     }
     
-    #botao51 > p, #botao61 > p{
+    #botao51 > p, #botao61 > p {
         font-size: 1rem;
     }
 
-    #contatos-titulo{
+    #contatos-titulo {
         font-size: 1.4rem;
     }
 
-    #direitos > p{
+    #direitos > p {
         font-size: 0.9rem;
     }
 }
 
-@media(max-width: 580px){
+@media(max-width: 580px) {
     #conteudo2 {
         align-items: center;
     }
@@ -1070,15 +1036,15 @@ header .navbar a{
         line-height: 2.5vh;
     }
 
-    .accordion-header{
+    .accordion-header {
         display: block;
     }
 
-    .accordion-header span{
+    .accordion-header span {
         height: auto;
     }
 
-    .accordion{
+    .accordion {
         width: 90vw;
     }
 }
@@ -1090,56 +1056,56 @@ header .navbar a{
         border-radius: 2rem;
     }
     
-    #botao21{
+    #botao21 {
         font-size: 1rem;
     }
 
-    #conteudo-footer{
+    #conteudo-footer {
         width: 90%;
         gap: 2rem;
     }
 
-    #logo-contatos{
+    #logo-contatos {
         flex-direction: column;
         gap: 1rem;
     }
 
-    #footer-divisoria{
+    #footer-divisoria {
         height: 0.3rem;
         width: 12rem;
     }
 
-    #direitos > p{
+    #direitos > p {
         font-size: 0.7rem;
     }
 
 }
 
-@media(max-width: 440px){
+@media(max-width: 440px) {
 
-    #eleve{
+    #eleve {
         font-size: 3.5vh;
         line-height: 3.5vh;
     }
 
-    #oferecemos{
+    #oferecemos {
         width: 60vw;
         font-size: 2vh;
         line-height: 2vh;
     
     }
 
-    .pcard{
+    .pcard {
         width: 90vw;
         height: 500px;
     }
 
-    .pcard-imagem{
+    .pcard-imagem {
         height: 150px;
         width: 300px;
     }
     
-    .pcard-texto{
+    .pcard-texto {
         height: 160px;
         width: 300px;
         font-size: 0.8rem;
@@ -1149,7 +1115,7 @@ header .navbar a{
 }
 
 @media(max-width: 439px) {
-    .card{
+    .card {
         max-width: 350px;
         max-height: 450px;
         border-radius: 2rem;
@@ -1157,18 +1123,18 @@ header .navbar a{
         background-color: var(--verde5);
     }
 
-    .botao3, .botao4{
+    .botao3, .botao4 {
         width: 18rem;
         height: 3rem;
     }
 
-    .botao31, .botao41{
+    .botao31, .botao41 {
         font-size: 1.1rem;  
     }
 }
 
 @media(max-width: 375px) {
-    .card{
+    .card {
         max-width: 300px;
         max-height: 400px;
         border-radius: 2rem;
@@ -1188,39 +1154,34 @@ header .navbar a{
         font-size: 2vh;
     }
 
-    .botao3{
+    .botao3 {
         width: 16rem;
         height: 3rem;
     }
 
-    .botao31{
+    .botao31 {
         font-size: 1.1rem;  
     }
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* ======== MEDIAS QUERRY EXTRAS ======== */
 
-/* MEDIAS EXTRAS */
+@media(max-width: 500px) and (max-height: 1040px) {
 
-@media(max-width: 500px) and (max-height: 1040px){
-
-    #astronauta{
+    #astronauta {
         width: 30vh;
     }
 
-    #eleve{
+    #eleve {
         width: 80vw;
         font-size: 3.5vh;
         line-height: 3.5vh;
     }
 
-    #oferecemos{
+    #oferecemos {
         width: 60vw;
         font-size: 2vh;
         line-height: 2vh;
     
     }
 }
-
-/*  */
-
