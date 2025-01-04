@@ -3,10 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Bruno+Ace+SC&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* ======== BOOTSTRAP ICONS ======== */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
-
 /* ======== ROOT ======== */
 
 :root {
@@ -20,6 +16,8 @@
     --insta1: #2B11BB;
     --insta2: #8134AF;
     --insta3: #DD2A7B;
+    --email: #c71610;
+    --linkedin: #0e76a8;
     --insta4: #fff;
     --branco: #fff;
     --brunofont: 'Bruno Ace', sans serif;
@@ -684,11 +682,14 @@ nav ul li a{
 
 /* ======== FOOTER ======== */
 
-#footer {
-    background: linear-gradient(to right, var(--verde2), var(--verde1));
+#footer, #logo-contatos, #logo-footer, #contatos-footer, .contatos-divisao, #botao51, #botao61, #botao71, #botao81, #direitos{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#footer {
+    background: linear-gradient(to right, var(--verde2), var(--verde1));
 
 }
 
@@ -698,17 +699,12 @@ nav ul li a{
 }
 
 #logo-contatos {
-    display: flex;
     flex-direction: row;
     gap: 2rem;
-    align-items: center;
-    justify-content: center;
 }
 
 #logo-footer {
-    display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 #logo-footer > p {
@@ -728,9 +724,7 @@ nav ul li a{
 }
 
 #contatos-footer {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 1.3rem;
 }
 
@@ -739,24 +733,26 @@ nav ul li a{
     font-size: 1.5rem;
 }
 
-#botao51 {
-    width: 20rem;
+.contatos-divisao{
+    gap: 1rem;
+}
+
+#botao51, #botao61, #botao71, #botao81{
+    width: 3rem;
     height: 3rem;
     border-radius: 2rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-
-    background-color: var(--whatsapp);
     font-weight: 600;
-    color: var(--branco);
 
     transition: all 0.5s ease;
 }
 
-#botao5:hover {
+#botao51 {
+    background-color: var(--whatsapp);
+    color: var(--branco);
+}
+
+#botao5:hover, #botao6:hover, #botao7:hover, #botao8:hover {
     transform: scale(1.10);
     cursor: pointer;
 }
@@ -768,35 +764,12 @@ nav ul li a{
 
 #botao51 > i {
     color: var(--verde1);
-    font-size: 30px;
-}
-
-#botao51 > p {
-    color: var(--verde1);
-    font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 20px;
 }
 
 #botao61 {
-    width: 20rem;
-    height: 3rem;
-    border-radius: 2rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-
     background: linear-gradient(to right, var(--insta1), var(--insta2), var(--insta3));
-    font-weight: 600;
     color: var(--branco);
-
-    transition: all 0.5s ease;
-}
-
-#botao6:hover {
-    transform: scale(1.10);
-    cursor: pointer;
 }
 
 #botao61:hover {
@@ -806,31 +779,39 @@ nav ul li a{
 
 #botao61 > i {
     color: var(--insta4);
-    font-size: 30px;
+    font-size: 20px;
 }
 
 #botao6 > i:hover {
     color: var(--insta3);
 }
 
-#botao61 > p {
+#botao71{
+    background-color: var(--email);
     color: var(--branco);
-    font-weight: 500;
-    font-size: 1.4rem;
 }
 
-#botao61 > p:hover {
-    background-image: linear-gradient(to right, var(--insta4), var(--insta2), var(--insta3));
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
+#botao71:hover {
+    background-color: var(--branco);
+    color: var(--email);
 }
 
-#direitos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#botao71 > i{
+    font-size: 20px;
+}
+
+#botao81{
+    background-color: var(--linkedin);
+    color: var(--branco);
+}
+
+#botao81:hover {
+    background-color: var(--branco);
+    color: var(--linkedin);
+}
+
+#botao81 > i{
+    font-size: 20px;
 }
 
 #direitos > p {
@@ -1014,6 +995,10 @@ nav ul li a{
         border-radius: 2rem;
     }
 
+    #botao11{
+        font-size: 1rem;
+    }
+
     #botaoc5{
         width: 80vw;
         height: 3.5rem;
@@ -1022,10 +1007,6 @@ nav ul li a{
 
     #botaoc51{
         font-size: 1.3rem;
-    } 
-    
-    #botao11{
-        font-size: 1rem;
     }
 
     #contatos-footer {
@@ -1042,21 +1023,6 @@ nav ul li a{
 
     #footer-divisoria {
         height: 12rem;
-    }
-
-    #botao51, #botao61 {
-        width: 15rem;
-        height: 2.5rem;
-    
-        gap: 0.5rem;
-    }
-
-    #botao51 > i, #botao61 > i {
-        font-size: 20px;
-    }
-    
-    #botao51 > p, #botao61 > p {
-        font-size: 1rem;
     }
 
     #contatos-titulo {

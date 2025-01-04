@@ -1,4 +1,4 @@
-// Scroll To Section
+// ======== SCROLL TO SECTION ========
 
 function scrollToSection(elementId, duration = 1500) {
     const element = document.getElementById(elementId);
@@ -29,11 +29,7 @@ function scrollToSection(elementId, duration = 1500) {
     }
   }
 
-// xxxxxxxxxxxxxxxxxxxxxxx
-
-// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-// ONCLICK
+// ======== ONCLICK LINK 1 (WHATSAPP) ========
 
 // function abrirLink() {
 //   // Pegar o elemento 'a' dentro do botão
@@ -46,9 +42,7 @@ function scrollToSection(elementId, duration = 1500) {
 //   window.open(url, '_blank');
 // }
 
-// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-// ONCLICK 2
+// ======== ONCLICK LINK 2 (INSTAGRAM) ========
 
 function abrirLink2() {
   // Pegar o elemento 'a' dentro do botão
@@ -61,9 +55,33 @@ function abrirLink2() {
   window.open(url, '_blank');
 }
 
-// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// ======== ONCLICK LINK 3 (EMAIL) ========
 
-// SCROLL TO REVEAL
+// function abrirLink2() {
+//   // Pegar o elemento 'a' dentro do botão
+//   const link = document.getElementsByClassName('botao');
+
+//   // Obter o href do link
+//   const url = "https://www.instagram.com/startechofc/";
+
+//   // Redirecionar para a URL em uma nova aba
+//   window.open(url, '_blank');
+// }
+
+// ======== ONCLICK LINK 4 (LINKEDIN) ========
+
+// function abrirLink2() {
+//   // Pegar o elemento 'a' dentro do botão
+//   const link = document.getElementsByClassName('botao');
+
+//   // Obter o href do link
+//   const url = "https://www.instagram.com/startechofc/";
+
+//   // Redirecionar para a URL em uma nova aba
+//   window.open(url, '_blank');
+// }
+
+// ======== SCROLL TO REVEAL ========
 
 const cards = document.querySelectorAll('.sr1, .sr2, .sr3, .sr4');
 
@@ -84,9 +102,7 @@ function reveal() {
 window.addEventListener('scroll', reveal);
 reveal(); // Chama a função inicialmente para garantir que os elementos já na viewport sejam animados
 
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-// ACCORDION
+// ======== ACCORDION ========
 
 // const accordions = document.querySelectorAll('.accordion')
 
@@ -116,4 +132,4 @@ accordions.forEach(accordion => {
 })
 
 
-// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// ======== XXXXX ========
