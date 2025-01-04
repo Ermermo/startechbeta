@@ -182,6 +182,7 @@ nav ul li a{
     font-size: 6vh;
     font-weight: 700;
     line-height: 6vh;
+    z-index: 1;
 
     background-image: linear-gradient(to right, var(--verde2), var(--verde1));
     -webkit-background-clip: text;
@@ -194,6 +195,7 @@ nav ul li a{
     width: 70%;
     font-size: 3vh;
     line-height: 3vh;
+    z-index: 1;
 
     color: var(--verde1);
 }
@@ -202,6 +204,7 @@ nav ul li a{
     width: 20rem;
     height: 3rem;
     border-radius: 2rem;
+    z-index: 1;
 
     display: flex;
     align-items: center;
@@ -229,6 +232,7 @@ nav ul li a{
     bottom: 0vh;
     width: 50vh;
     transform: scaleX(-1);  
+    z-index: 0;
 }
 
 .foto {
@@ -551,6 +555,11 @@ nav ul li a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+}
+
+#container5{
+    height: auto;
 }
 
 .subtitulo {
@@ -559,7 +568,7 @@ nav ul li a{
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin: 0 0 5rem 0;
+    margin: 0 0 3rem 0;
 }
 
 .subtitulo > .fa-star {
@@ -644,6 +653,33 @@ nav ul li a{
 .accordion:has(.active) .arrow {
     transform: rotate(180deg);
 
+}
+
+#botaoc5 {
+    margin-top: 2rem;
+    width: 40rem;
+    height: 4rem;
+    border-radius: 10rem;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.5s ease;
+    background: linear-gradient(to right, var(--verde2), var(--verde1));
+    color: var(--branco);
+}
+
+#botaoc5:hover {
+    transform: scale(1.10);
+    cursor: pointer;
+}
+
+#botaoc51 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--branco);
 }
 
 /* ======== FOOTER ======== */
@@ -977,8 +1013,18 @@ nav ul li a{
         height: 2rem;
         border-radius: 2rem;
     }
+
+    #botaoc5{
+        width: 80vw;
+        height: 3.5rem;
+        border-radius: 2rem;
+    }
+
+    #botaoc51{
+        font-size: 1.3rem;
+    } 
     
-    #botao11 {
+    #botao11{
         font-size: 1rem;
     }
 
@@ -1020,6 +1066,16 @@ nav ul li a{
     #direitos > p {
         font-size: 0.9rem;
     }
+
+    .subtitulo > i{
+        visibility: hidden;
+        height: 0;
+        width: 0;
+    }
+
+    .accordion{
+        width: 90vw;
+    }
 }
 
 @media(max-width: 580px) {
@@ -1044,7 +1100,7 @@ nav ul li a{
         height: auto;
     }
 
-    .accordion {
+    .accordion{
         width: 90vw;
     }
 }
@@ -1081,6 +1137,12 @@ nav ul li a{
 
 }
 
+@media(max-width: 490px){
+    .subtitulo > span{
+        font-size: 1rem;
+    }
+}
+
 @media(max-width: 440px) {
 
     #eleve {
@@ -1112,6 +1174,10 @@ nav ul li a{
         font-weight: 300;
     }
     
+    .subtitulo > span{
+        font-size: 0.9rem;
+    }
+
 }
 
 @media(max-width: 439px) {

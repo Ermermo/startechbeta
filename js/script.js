@@ -88,13 +88,31 @@ reveal(); // Chama a função inicialmente para garantir que os elementos já na
 
 // ACCORDION
 
+// const accordions = document.querySelectorAll('.accordion')
+
+// accordions.forEach(accordion => {
+//   accordion.addEventListener('click', () =>{
+//     const body = accordion.querySelector('.accordion-body');
+//     body.classList.toggle('active');
+//   })
+// })
+
 const accordions = document.querySelectorAll('.accordion')
 
 accordions.forEach(accordion => {
-  accordion.addEventListener('click', () =>{
-    const body = accordion.querySelector('.accordion-body');
-    body.classList.toggle('active');
-  })
+    accordion.addEventListener('click', () => {
+        // Remove a classe 'active' de todos os acordões
+        accordions.forEach(otherAccordion => {
+            if (otherAccordion !== accordion) {
+                const otherBody = otherAccordion.querySelector('.accordion-body');
+                otherBody.classList.remove('active');
+            }
+        });
+
+        // Adiciona a classe 'active' ao acordeão clicado
+        const body = accordion.querySelector('.accordion-body');
+        body.classList.toggle('active');
+    })
 })
 
 
